@@ -9,11 +9,24 @@
             width: 400px;
             height: 400px;
             object-fit: cover;
-            border: 1px solid black;
+            border: 1px solid blue;
             border-radius: 20px;
             box-shadow: 0px 0px 10px 0px;
             margin: 20px auto;
             display: block;
+        }
+        .product-img{
+            min-height: 70px;
+            width: 70px;
+            object-fit: cover;
+            margin: 10px;
+            border: 1px solid blue;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .con{
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
@@ -21,12 +34,18 @@
    <img src="vivo3.png" id="main-product-image"/> 
 
    <div class="con">
-    <img src="vivo1.png" class="product-img"/>
-    <img src="vivo4.png" class="product-img"/>
-    <img src="Vivo5.png" class="product-img"/>
-    <img src="vivo2.png" class="product-img"/>
-
-
+    <img src="vivo1.png" class="product-img" onclick="changeImg('vivo1.png')"/>
+    <img src="vivo5.png" class="product-img" onclick="changeImg('vivo5.png')"/>
+    <img src="vivo4.png" class="product-img" onclick="changeImg('vivo4.png')"/>
+    <img src="Vivo2.png" class="product-img" onclick="changeImg('Vivo2.png')"/>
    </div>
+
+   <script>
+    function changeImg(imgName){
+      const mainImgage = document.getElementById('main-product-image');
+       mainImgage.src = imgName;
+    }
+    
+   </script>
 </body>
 </html>
